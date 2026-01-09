@@ -18,7 +18,7 @@ tasks:
 
   ## Monarch txAdmin Recipe
   - action: download_file
-    src: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/cfg/server.cfg
+    url: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/cfg/server.cfg
     path: ./server.cfg
 
   - action: download_github
