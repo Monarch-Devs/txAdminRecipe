@@ -24,7 +24,7 @@ tasks:
   - action: download_github
     src: https://github.com/Monarch-Devs/mnr_core
     ref: main
-    dest: ./resources/[mnr]/
+    dest: ./resources/[mnr]/mnr_core
 
   - action: connect_database
 
