@@ -26,5 +26,7 @@ tasks:
     ref: main
     dest: ./resources/[mnr]/
 
+  - action: connect_database
+
   - action: query_database
     file: ./resources/[mnr]/mnr_core/mnr_core.sql
