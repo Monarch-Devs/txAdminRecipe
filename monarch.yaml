@@ -33,7 +33,7 @@ tasks:
   - action: remove_path
     path: ./resources/[cfx]/[test]
 
-  ## Monarch txAdmin Recipe
+  ## Base Setup
   - action: download_file
     url: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/mnrLogo.png
     path: ./mnrLogo.png
@@ -42,6 +42,7 @@ tasks:
     url: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/cfg/server.cfg
     path: ./server.cfg
 
+  ## Monarch Resources (Not definitive)
   - action: download_github
     src: https://github.com/Monarch-Devs/mnr_core
     ref: main
@@ -51,3 +52,49 @@ tasks:
 
   - action: query_database
     file: ./resources/[mnr]/mnr_core/mnr_core.sql
+
+  ## Ox Resources [DOWNLOAD]
+  - action: download_file
+    path: ./installation/oxmysql.zip
+    url: https://github.com/communityox/oxmysql/releases/latest/download/oxmysql.zip
+
+  - action: download_file
+    path: ./installation/ox_lib.zip
+    url: https://github.com/communityox/ox_lib/releases/latest/download/ox_lib.zip
+
+  - action: download_file
+    path: ./installation/ox_target.zip
+    url: https://github.com/communityox/ox_target/releases/latest/download/ox_target.zip
+
+  - action: download_file
+    path: ./installation/ox_inventory.zip
+    url: https://github.com/communityox/ox_inventory/releases/latest/download/ox_inventory.zip
+
+  - action: download_file
+    path: ./installation/ox_doorlock.zip
+    url: https://github.com/communityox/ox_doorlock/releases/latest/download/ox_doorlock.zip
+
+  ## Ox Resources [UNZIP & MOVE]
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./installation/oxmysql.zip
+
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./installation/ox_lib.zip
+
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./installation/ox_target.zip
+
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./installation/ox_inventory.zip
+
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./installation/ox_doorlock.zip
+
+  ## Cleaning Installation Leftovers
+  - action: remove_path
+    path: ./installation
