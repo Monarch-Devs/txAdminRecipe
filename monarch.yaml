@@ -1,5 +1,6 @@
 $engine: 3
 $onesync: on
+
 name: Monarch Framework
 description: Recipe for Monarch Framework installation and setup
 author: IlMelons
@@ -11,12 +12,32 @@ tasks:
     src: https://github.com/citizenfx/cfx-server-data
     ref: master
     subpath: resources
-    dest: ./resources
+    dest: ./resources/[cfx]
+
+  ## Cleaning unnecessary things
+  - action: remove_path
+    path: ./resources/[cfx]/[gamemodes]/[maps]/redm-map-one
 
   - action: remove_path
-    path: ./resources/[gameplay]/chat
+    path: ./resources/[cfx]/[gameplay]/[examples]
+
+  - action: remove_path
+    path: ./resources/[cfx]/[gameplay]/chat
+
+  - action: remove_path
+    path: ./resources/[cfx]/[local]
+
+  - action: remove_path
+    path: ./resources/[cfx]/[system]/sessionmanager-rdr3
+
+  - action: remove_path
+    path: ./resources/[cfx]/[test]
 
   ## Monarch txAdmin Recipe
+  - action: download_file
+    url: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/mnrLogo.png
+    path: ./mnrLogo.png
+
   - action: download_file
     url: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/cfg/server.cfg
     path: ./server.cfg
