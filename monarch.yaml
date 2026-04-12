@@ -28,6 +28,9 @@ tasks:
     path: ./resources/[cfx]/[local]
 
   - action: remove_path
+    path: ./resources/[cfx]/[system]/hardcap
+
+  - action: remove_path
     path: ./resources/[cfx]/[system]/sessionmanager-rdr3
 
   - action: remove_path
