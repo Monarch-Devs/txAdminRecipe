@@ -45,6 +45,10 @@ tasks:
     url: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/cfg/server.cfg
     path: ./server.cfg
 
+  - action: download_file
+    url: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/cfg/mnr.cfg
+    path: ./mnr.cfg
+
   ## Monarch Resources (Not definitive)
   - action: download_github
     src: https://github.com/Monarch-Devs/mnr_adaptivecard
