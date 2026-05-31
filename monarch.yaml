@@ -68,23 +68,23 @@ tasks:
   ## Ox Resources [DOWNLOAD]
   - action: download_file
     path: ./installation/oxmysql.zip
-    url: https://github.com/communityox/oxmysql/releases/latest/download/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
 
   - action: download_file
     path: ./installation/ox_lib.zip
-    url: https://github.com/communityox/ox_lib/releases/latest/download/ox_lib.zip
+    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
 
   - action: download_file
     path: ./installation/ox_target.zip
-    url: https://github.com/communityox/ox_target/releases/latest/download/ox_target.zip
+    url: https://github.com/overextended/ox_target/releases/latest/download/ox_target.zip
 
   - action: download_file
     path: ./installation/ox_inventory.zip
-    url: https://github.com/communityox/ox_inventory/releases/latest/download/ox_inventory.zip
+    url: https://github.com/overextended/ox_inventory/releases/latest/download/ox_inventory.zip
 
   - action: download_file
     path: ./installation/ox_doorlock.zip
-    url: https://github.com/communityox/ox_doorlock/releases/latest/download/ox_doorlock.zip
+    url: https://github.com/overextended/ox_doorlock/releases/latest/download/ox_doorlock.zip
 
   ## Ox Resources [UNZIP & MOVE]
   - action: unzip
@@ -106,6 +106,15 @@ tasks:
   - action: unzip
     dest: ./resources/[ox]
     src: ./installation/ox_doorlock.zip
+
+  ## Ox Bridge
+# - action: download_file
+#   path: ./resources/[ox]/ox_inventory/modules/bridge/mnr/client.lua
+#   url: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/bridge/ox_inventory/mnr/client.lua
+
+# - action: download_file
+#   path: ./resources/[ox]/ox_inventory/modules/bridge/mnr/server.lua
+#   url: https://raw.githubusercontent.com/Monarch-Devs/txAdminRecipe/refs/heads/main/bridge/ox_inventory/mnr/server.lua
 
   ## Cleaning Installation Leftovers
   - action: remove_path
