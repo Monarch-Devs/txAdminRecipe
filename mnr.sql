@@ -118,12 +118,3 @@ CREATE TABLE IF NOT EXISTS `char_position` (
     PRIMARY KEY (`charId`),
     FOREIGN KEY (`charId`) REFERENCES `characters`(`charId`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-/* Ox Resources */
-
-CREATE TABLE IF NOT EXISTS `ox_doorlock` (
-    `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(50) NOT NULL,
-    `data` LONGTEXT NOT NULL,
-    PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

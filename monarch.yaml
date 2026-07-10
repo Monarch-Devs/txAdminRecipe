@@ -51,9 +51,9 @@ tasks:
 
   ## Monarch Resources (Not definitive)
   - action: download_github
-    src: https://github.com/Monarch-Devs/mnr_adaptivecard
+    src: https://github.com/Monarch-Devs/mnr_adaptivecards
     ref: main
-    dest: ./resources/[mnr]/mnr_adaptivecard
+    dest: ./resources/[mnr]/mnr_adaptivecards
 
   - action: download_github
     src: https://github.com/Monarch-Devs/mnr_core
