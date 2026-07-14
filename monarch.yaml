@@ -54,6 +54,10 @@ tasks:
     path: ./installation/mnr_sql.zip
     url: https://github.com/Monarch-Devs/mnr_sql/releases/latest/download/mnr_sql.zip
 
+  - action: download_file
+    path: ./installation/mnr_api.zip
+    url: https://github.com/Monarch-Devs/mnr_api/releases/latest/download/mnr_api.zip
+
   - action: download_github
     src: https://github.com/Monarch-Devs/mnr_adaptivecards
     ref: main
@@ -64,24 +68,20 @@ tasks:
     ref: main
     dest: ./resources/[mnr]/mnr_core
 
-  - action: connect_database
-
-  - action: query_database
-    file: ./resources/[mnr]/mnr_core/mnr_core.sql
-
-  ## [DOWNLOAD]
-  - action: download_file
-    path: ./installation/ox_lib.zip
-    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
-
   ## [UNZIP & MOVE]
   - action: unzip
     dest: ./resources/[mnr]
     src: ./installation/mnr_sql.zip
 
   - action: unzip
-    dest: ./resources/[ox]
-    src: ./installation/ox_lib.zip
+    dest: ./resources/[mnr]
+    src: ./installation/mnr_api.zip
+
+  ## DATABASE ACTIONS
+  - action: connect_database
+
+  - action: query_database
+    file: ./resources/[mnr]/mnr_core/mnr_core.sql
 
   ## Cleaning Installation Leftovers
   - action: remove_path
